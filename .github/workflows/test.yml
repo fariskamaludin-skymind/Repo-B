@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout Repos
         uses: actions/checkout@v2
+        with:
+          ref: test-b
 
       - name: Create PR request
         uses: peter-evans/create-pull-request@v3
