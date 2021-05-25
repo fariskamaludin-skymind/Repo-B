@@ -17,7 +17,6 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
           branch: test-b
-          base: main
           assignees: fariskamaludin-skymind
           reviewers: fariskamaludin-skymind
           labels: automated pr
