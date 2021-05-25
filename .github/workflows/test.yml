@@ -1,13 +1,23 @@
-name: Test
+name: Create PR
 
 on:
   push:
     branches: test-b
 
 jobs:
-  test:
-    name: Test Job
+  PR:
+    name: Create PR
     runs-on: ubuntu-latest
     steps:
-      - name: Echo job
-        run: echo "Hello World !!!"
+      - name: Checkout Repos
+        uses: actions/checkout@v2
+
+      - name: Create PR request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          branch: test-b
+          base: main
+          assignees: fariskamaludin-skymind
+          reviewers: fariskamaludin-skymind
+          labels: automated pr
