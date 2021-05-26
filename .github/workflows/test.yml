@@ -2,7 +2,7 @@ name: Create PR
 
 on:
   push:
-    branches: test-c
+    branches: test-b
 
 jobs:
   PR:
@@ -13,11 +13,16 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Create PR request
-        uses: peter-evans/create-pull-request@v3
+        uses: repo-sync/pull-request@v2
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
-          branch: test-b
-          base: main
-          assignees: fariskamaludin-skymind
-          reviewers: fariskamaludin-skymind
-          labels: automated pr
+          destination_branch: "main"                      # If blank, default: master
+          pr_title: "Pulling ${{ github.ref }} into main" # Title of pull request
+          pr_body: ":crown: *An automated PR*"              # Full markdown support, requires pr_title to be set
+          #pr_template: ".github/PULL_REQUEST_TEMPLATE.md"   # Path to pull request template, requires pr_title to be set, excludes pr_body
+          pr_reviewer: "fariskamaludin-skymind"                         # Comma-separated list (no spaces)
+          pr_assignee: "fariskamaludin-skymind"                         # Comma-separated list (no spaces)
+          pr_label: "auto-pr"                               # Comma-separated list (no spaces)
+          #pr_milestone: "Milestone 1"                       # Milestone name
+          #pr_draft: true                                    # Creates pull request as draft
+          pr_allow_empty: true                              # Creates pull request even if there are no changes
