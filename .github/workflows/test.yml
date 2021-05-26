@@ -2,7 +2,7 @@ name: Create PR
 
 on:
   push:
-    branches: test-b
+    branches: test-c
 
 jobs:
   PR:
