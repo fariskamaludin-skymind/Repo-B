@@ -17,7 +17,7 @@ jobs:
         with:
           github_token: ${{ secrets.PERSONAL_TOKEN }}
           destination_branch: "main"                      # If blank, default: master
-          pr_title: "Pulling ${GITHUB_REF#refs/heads/} into main" # Title of pull request
+          pr_title: "Pulling ${GITHUB_REF#refs/heads/} branch into main branch" # Title of pull request
           pr_body: ":crown: *An automated PR*"              # Full markdown support, requires pr_title to be set
           #pr_template: ".github/PULL_REQUEST_TEMPLATE.md"   # Path to pull request template, requires pr_title to be set, excludes pr_body
           pr_reviewer: "fariskamaludin-skymind"                         # Comma-separated list (no spaces)
