@@ -16,8 +16,8 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
-          branch: main
-          base: test-b
+          branch: test-b
+          base: main
           assignees: fariskamaludin-skymind
           reviewers: fariskamaludin-skymind
           labels: automated pr
