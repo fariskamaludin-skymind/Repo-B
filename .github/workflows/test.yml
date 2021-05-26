@@ -2,7 +2,7 @@ name: Create PR
 
 on:
   push:
-    branches: test-c
+    branches: test-b
 
 jobs:
   PR:
@@ -16,8 +16,8 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
-          branch: test-b
-          base: main
+          branch: main
+          base: test-b
           assignees: fariskamaludin-skymind
           reviewers: fariskamaludin-skymind
           labels: automated pr
