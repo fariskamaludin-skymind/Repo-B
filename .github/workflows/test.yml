@@ -22,10 +22,7 @@ jobs:
             "## This is an automatically created PR 
             
             - It will triggered once codes in **dist folder** from ***Classifai_FrontEnd*** has been pushed.
-            - Files & sub-folder in **dist folder** of ***Classifai_FrontEnd*** will be copied into ***classifai's webroots***
-            
-            "
-
+            - Files & sub-folder in **dist folder** of ***Classifai_FrontEnd*** will be copied into ***classifai's webroots*** "
 
           pr_reviewer: "fariskamaludin-skymind"                         
           pr_assignee: "fariskamaludin-skymind"                         
