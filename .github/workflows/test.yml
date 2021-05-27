@@ -19,10 +19,13 @@ jobs:
           destination_branch: "main"                      
           pr_title: "Pulling ${GITHUB_REF#refs/heads/} branch into main branch" 
           pr_body: |
-            ## This is an automatically created PR
+            ## This is an automatically created PR 
             
-            - It will triggered once codes in **dist folder** from ***Classifai_FrontEnd*** has been pushed.
-            - Files & sub-folder in **dist folder** of ***Classifai_FrontEnd*** will be copied into ***classifai's webroots***
+            - It will triggered once codes in **dist folder** from repo [***Classifai_FrontEnd***][1] has been pushed.
+            - Files & sub-folder in **dist folder** of repo [***Classifai_FrontEnd***][1] will be copied into [***classifai's webroots***][2]
+
+            [1]: https://github.com/CertifaiAI/Classifai_FrontEnd
+            [2]: https://github.com/CertifaiAI/classifai/tree/v2_alpha/classifai-core/src/main/resources/webroot
 
           pr_reviewer: "fariskamaludin-skymind"                         
           pr_assignee: "fariskamaludin-skymind"                         
