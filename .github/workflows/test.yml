@@ -19,7 +19,7 @@ jobs:
           destination_branch: "main"                      
           pr_title: "Pulling ${GITHUB_REF#refs/heads/} branch into main branch" 
           pr_body: |
-            ## This is an automatically created PR 
+            ## This is an automatically created PR :robot::robot:
             
             - It will triggered once codes in **dist folder** from repo [***Classifai_FrontEnd***][1] has been pushed.
             - Files & sub-folder in **dist folder** of repo [***Classifai_FrontEnd***][1] will be copied into [***classifai's webroots***][2]
