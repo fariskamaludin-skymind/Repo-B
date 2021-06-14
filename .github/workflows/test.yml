@@ -30,4 +30,9 @@ jobs:
           pr_reviewer: "fariskamaludin-skymind"                         
           pr_assignee: "fariskamaludin-skymind"                         
           pr_label: "auto-pr"                               
-          pr_allow_empty: true                             
+          pr_allow_empty: true   
+
+      - uses: kceb/pull-request-url-action@v1
+        id: pr-url
+
+      - run: echo "${{ steps.pr-url.outputs.url }}"                          
